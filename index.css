@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+	box-sizing: border-box;
+}
+body {
+	color: white;
+	background-color: black;
+	overflow: hidden;
+}
+
+button {
+	border: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.title-page {
+	position: relative;
+	color: white;
+	height: 100vh;
+}
+
+.title-page > .title {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	padding: 50px 100px 50px 100px;
+	font-size: 50px;
+	letter-spacing: 2px;
+	box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, .2);
+	background-color: rgba(255, 255, 255, .2);
+	border-radius: 40px;
+	display: inline-block;
+	left: 50%;
+	margin-top: 5%;
+	position: relative;
+	transform: translateX(-50%);
+}
+
+.sub-title {
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	padding: 1.2em;
+}
+
+.instructions {
+	color: black;
+	font-weight: bold;
+	width: 60%;
+	position: relative;
+	margin: auto;
+	font-size: 20px;
+	line-height: 2.2em;
+	box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, .2);
+	background-color: rgba(255, 255, 255, .5);
+	border-radius: 40px;
+	padding: 20px 40px 20px 50px;
+}
+
+.start-btn {
+	color: black;
+	background-color: white;
+	position: relative;
+	padding: 15px;
+	font-size: 1.1em;
+	font-weight: bold;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 50px;
+	transition: .1s ease-in-out;
+	transition-property: background-color, color;
+}
+
+.start-btn:hover {
+	background-color: black;
+	color: white;
+	transition: all .1s ease-in;
+}
+
+/* Game Page */
+.game-page {
+	height: 100vh;
+}
+
+.game-page > .title {
+	position: relative;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.5em;
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .1);
+	display: inline-block;
+	padding: 20px;
+	border-radius: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 2%;
+}
+
+.title-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin: auto;
+	padding: 40px 10% 40px 10%;
+	font-size: 2em;
+}
+
+li {
+	list-style-type: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#user-board {
+	position: relative;
+	height: 440px;
+	width: 440px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	height: 40px;
+	width: 40px;
+	border: thin solid white;
+	cursor: pointer;
+	text-align: center;
+	font-weight: bold;
+}
+
+tr > td:first-child:hover,
+tr:last-child > td:hover {
+	background-color: transparent;
+}
+
+td:hover {
+	background-color: rgba(255, 255, 255, .3);
+}
+
+.number {
+	text-align: center;
+	border: none;
+}
+
+.letter > td {
+	text-align: center;
+	border: none;
+}
+
+#log {
+	position: relative;
+	width: 400px;
+	border: thin solid white;
+	border-bottom: none;
+	height: 600px;
+}
+
+#comp-board {
+	position: relative;
+	width: 440px;
+	height: 440px;
+}
+
+.selected {
+	box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .2);
+}
+
+.log-ctrls {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+}
+
+#log-header {
+	border: medium solid white;
+	padding: 10px;
+	font-size: 1em;
+}
+
+#log-screen {
+	border: thin solid white;
+	height: 300px;
+	background-color: rgba(255, 255, 255, .1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#log-screen > .ship {
+	z-index: 100;
+}
+
+#log-output {
+	font-family: "Poppins", sans-serif;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: .9em;
+	max-height: 200px;
+	overflow-y: scroll;
+	overflow-wrap: break-word;
+	font-weight: bold;
+}
+
+#log-output::-webkit-scrollbar {
+	width: 10px;
+}
+
+#log-output::-webkit-scrollbar-track {
+	background: black;
+}
+
+#log-output::-webkit-scrollbar-thumb {
+	background: rgb(230, 198, 139);
+}
+
+#log-input {
+	border: none;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 70%;
+	font-size: 1.1em;
+}
+
+#log-input:focus {
+	outline: 0;
+}
+
+.log-ctrls > button {
+	width: 30%;
+	font-weight: bold;
+	color: black;
+	background-color: lightgrey;
+	transition: all .1s ease-in-out;
+}
+
+.log-ctrls > button:hover {
+	background-color: rgba(255, 255, 255, .2);
+	color: white;
+	transition: all .1s ease-in;
+}
+
+.log-ctrls > button:active {
+	transform: scale(.95);
+	transition: transform .1s ease-in;
+}
+
+.square {
+	height: 40px;
+	width: 40px;
+	border: thin solid white;
+	border-collapse: collapse;
+	background-color: #add8e6;
+}
+
+.ship {
+	transition: transform .1s linear;
+}
